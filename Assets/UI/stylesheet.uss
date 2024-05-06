@@ -1,0 +1,17 @@
+.button {
+    width: auto;
+    height: auto;
+    -unity-font-style: bold;
+    font-size: 22px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    border-left-color: rgba(250, 244, 244, 0);
+    border-right-color: rgba(250, 244, 244, 0);
+    border-top-color: rgba(250, 244, 244, 0);
+    border-bottom-color: rgba(250, 244, 244, 0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgba(196, 251, 255, 0);
+    color: rgb(72, 180, 250);
+}

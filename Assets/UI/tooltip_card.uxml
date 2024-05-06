@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label text="Enemy1&#10;" style="-unity-font-style: bold; font-size: 16px; color: rgb(146, 255, 234); height: 25px; width: 331px;" />
+        <ui:Vector3Field label="Vec3 Field" />
+        <ui:MinMaxSlider label="Min/Max Slider" value="10,12" low-limit="-10" high-limit="40" style="height: 36px; width: 341px;" />
+    </ui:VisualElement>
+</ui:UXML>

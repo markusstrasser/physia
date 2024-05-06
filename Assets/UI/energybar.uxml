@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; height: 38px; width: 338px;">
+        <ui:ProgressBar value="22" title="&lt;kJ&gt;" />
+    </ui:VisualElement>
+</ui:UXML>
