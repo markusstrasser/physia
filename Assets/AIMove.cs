@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AIMove : MonoBehaviour
 {
@@ -9,11 +10,15 @@ public class AIMove : MonoBehaviour
     [SerializeField] private float speed = 1f;
     [SerializeField] private Transform targetObject;
     [SerializeField] private float reloadTimer = 0f;
+    NavMeshAgent agent;
+
     private float reloadDelay = 5f;
     private float weaponLoadTime = 3f;
 
     private void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
+        agent.stoppingDistance = stoppingDistance;
         initialPosition = transform.position;
         StartCoroutine(LoadWeapon());
     }
@@ -47,7 +52,8 @@ public class AIMove : MonoBehaviour
     {
         if (distance > stoppingDistance)
         {
-            transform.position = Vector3.Lerp(transform.position, targetObject.position, speed * Time.deltaTime);
+            agent.SetDestination(targetObject.position);
+            //transform.position = Vector3.Lerp(transform.position, targetObject.position, speed * Time.deltaTime);
         }
         else
         {
@@ -61,7 +67,8 @@ public class AIMove : MonoBehaviour
         if (reloadTimer < reloadDelay)
         {
             reloadTimer += Time.deltaTime;
-            transform.position = Vector3.Lerp(transform.position, initialPosition, speed * Time.deltaTime);
+            agent.SetDestination(initialPosition);
+            agent.speed = speed;
         }
         else
         {
